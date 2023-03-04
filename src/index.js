@@ -1,9 +1,8 @@
 const express = require('express');
 
-const app = express();
+const routes = require('./routes');
 
-app.get('/', (request, response) => {
-  response.send('Hello');
-});
+const app = express();
+app.use(routes);
 
 app.listen(3003, () => console.log('Its ok http://localhost:3003'));
